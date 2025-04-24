@@ -1,0 +1,467 @@
+/* Homepage only  */
+body.homepage {
+  background-color: #f1f2f6;
+}
+
+.hero {
+  background: url('/assets/image/gym_equipment.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+
+.hero h1 span {
+  color: #00b894;
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+
+.cta-button {
+  background: #00b894;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  transition: background-color 0.3s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+
+.cta-button:hover {
+  background: #019875;
+}
+
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.feature-card h2 {
+  margin-bottom: 10px;
+  color: #00b894;
+}
+
+
+.quote-section {
+  text-align: center;
+  background: rgb(141, 145, 140);
+  padding: 40px 20px;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #2d3436;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .feature-card {
+    width: 90%;
+  }
+}
+
+
+/* page for homepage, login, register, workoutlog (shared) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f3f3;
+  color: #2d3436;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+/*  Header */
+header {
+  background-color: #1e272e;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+header h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+
+header p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.header-buttons a button {
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #2ecc71;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+
+.header-buttons a button.logout {
+  background-color: #e74c3c;
+}
+
+
+.header-buttons a button.logout:hover {
+  background-color: #c0392b;
+}
+
+
+.header-buttons a button:hover {
+  background-color: #27ae60;
+}
+
+
+/* Slim Nav for Homepage */
+.slim-header {
+  background-color: #1e272e;
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slim-header nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+
+.slim-header nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.slim-header nav a:hover {
+  color: #2ecc71;
+}
+
+
+.slim-header nav .auth-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.slim-header nav .auth-btn:hover {
+  background-color: #c0392b;
+}
+
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* Layout */
+main {
+  flex: 1;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+
+/* Sections */
+.section {
+  background-color: white;
+  max-width: 900px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #2d3436;
+}
+
+
+/* Form */
+form input, form button, form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+
+.form-group-inline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.form-group-inline > div {
+  flex: 1;
+}
+
+
+.primary-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+
+.primary-btn:hover {
+  background-color: #27ae60;
+}
+
+
+/* Workout Logs */
+#logsContainer, #searchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+
+.log-card {
+  background-color: #ffffff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  border-left: 4px solid #2ecc71;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.log-card p {
+  margin: 2px 0;
+  line-height: 0.8;
+  font-size: 0.95rem;
+}
+
+
+.log-card p span {
+  font-weight: bold;
+  color: #2d3436;
+}
+
+
+.log-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+
+.log-buttons button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+
+.edit-btn {
+  background-color: #0984e3;
+  color: white;
+}
+
+
+.edit-btn:hover {
+  background-color: #0866b3;
+}
+
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+
+/* Footer */
+footer {
+  background-color: #1e272e;
+  color: #e0f2f1;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.95rem;
+  border-top: 3px solid #2ecc71;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.15);
+  margin-top: 0;
+}
+
+
+/* Login/Register Pages */
+.login-page, .register-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+
+.login-form, .register-form {
+  background-color: white;
+  max-width: 450px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.login-form button, .register-form button {
+  background-color: #2ecc71;
+  color: rgb(30, 244, 11);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+
+.login-form button:hover, .register-form button:hover {
+  background-color: #27ae60;
+}
+
+
+.login-form p, .register-form p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+
+
+

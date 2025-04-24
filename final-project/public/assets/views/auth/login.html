@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/styles/homepage.css" />
+</head>
+<body>
+  <!-- Header with page title and subtitle -->
+  <header class="gradient-header">
+    <h1>Login</h1>
+    <p>Access your workout logs</p>
+  </header>
+
+  <!-- Login form -->
+  <main class="auth-container">
+    <form method="POST" action="/login" class="auth-form" id="loginForm">
+      <!-- Username  -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+      <!-- Password  -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <!-- Submit  -->
+      <button type="submit" class="btn green">Login</button>
+
+      <p id="errorMessage" class="error-message"></p>
+    </form>
+
+    <p>Don’t have an account? <a href="/register">Register here</a></p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Workout Tracker. All rights reserved.</p>
+  </footer>
+
+  <!-- Form submission  -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("loginForm");
+      const errorMessage = document.getElementById("errorMessage");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); 
+
+        const formData = new FormData(form); 
+        const data = new URLSearchParams(formData); 
+
+        const res = await fetch("/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: data,
+        });
+
+        const json = await res.json(); 
+
+        if (json.success) {
+          window.location.href = "/";
+        } else {
+          errorMessage.textContent = json.error || "Something went wrong.";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

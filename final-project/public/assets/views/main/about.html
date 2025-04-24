@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Fitness Haven</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles/homepage.css">
+
+  <!-- CSS Style for the about page (unique to the about page) --> 
+  <style>
+    /* Main container  */
+    .about-container {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .about-container h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #222;
+      margin-bottom: 25px;
+    }
+
+    .about-container p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    /* Section that contains image + bio */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    /* Profile picture container */
+    .about-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bio-text {
+      max-width: 600px;
+    }
+
+    /* FAQ section  */
+    .faq-section {
+      margin-top: 40px;
+    }
+
+    .faq-item {
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-item h4 {
+      font-size: 1.3rem;
+      color: #333;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top navigation bar -->
+<header class="slim-header">
+  <nav>
+    <a href="/">Home</a>
+    <a href="/workouts">View Log</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Main About  -->
+  <div class="about-container">
+    <h2>About Fitness Haven</h2>
+
+    <!-- Image and bio text section -->
+    <div class="about-section">
+      <div class="about-image">
+        <!-- Profile photo -->
+        <img src="/assets/image/mahir_aboutme.jpg" alt="Mahir" />
+      </div>
+      <div class="bio-text">
+        <p>
+          Hello! I'm Mahir, a Computer Science major and a junior at Fordham University. I created Fitness Haven as a personal project to combine my interests in tech and fitness.
+        </p>
+        <p>
+          What inspired me to create this app was my journey of starting to go to the gym. I had recently gotten into the gym and I realized that having a ditigal tracking log helped me track my progress, as I would be able to record my exercises and will not lose it like I would if I had a paper log. I believe that tracking workouts digitally is an essential habit that helps maintain consistency and monitor progress. This app serves as a tool for anyone on a fitness journey, helping you stay motivated and track your improvements.
+        </p>
+        <p>
+          Fitness Haven is designed to be simple, intuitive, and motivating. I hope it helps you as much as it has helped me in maintaining my workout routine.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ section -->
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-section">
+      <div class="faq-item">
+        <h4>How do I log a workout?</h4>
+        <p>To log a workout, simply fill in the workout form with the date, exercise type, and any other relevant details like sets, reps, and weight. Click "Log Workout" to save it.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I track my progress over time?</h4>
+        <p>Yes! You can view your logged workouts and monitor your progress. The app also shows your most frequent exercises and total workouts logged.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What data do you store about my workouts?</h4>
+        <p>We store your exercise type, weight, sets, reps, date, time, distance, and calories burned. You can also update or delete this information at any time.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How can I update or delete a workout log?</h4>
+        <p>You can edit or delete your logged workouts by clicking the "Edit" or "Delete" button next to each log entry.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is my data secure?</h4>
+        <p>Yes, your data is secure. We take your privacy very seriously. Only you can see your workout logs and no one else!</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer  -->
+<footer>
+  &copy; 2025 Fitness Haven. All rights reserved.
+</footer>
+
+</body>
+</html>
