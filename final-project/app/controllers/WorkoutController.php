@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\models\Workout;
+use Orhanerday\OpenAi\OpenAi;
+
 
 class WorkoutController extends Controller
 {
@@ -142,5 +144,30 @@ class WorkoutController extends Controller
         $this->returnJSON(['success' => true]);
     }
 
+    // Ask AI for workout suggestions
+    public function getAdvice()
+    {
+        session_start();
+        if (empty($_GET['question'])) {
+            $this->returnJSON(['error' => 'No question provided']);
+            return;
+        }
+    
+        $question = trim($_GET['question']);
+        $open_ai  = new OpenAi($_ENV['OPENAI_API_KEY']);
+    
+        $response = $open_ai->chat([
+            'model'    => 'gpt-3.5-turbo',
+            'messages' => [
+                ['role'=>'system','content'=>'You are a helpful fitness coach.'],
+                ['role'=>'user',  'content'=>"Give me workout advice for: {$question}. Canyou write in a paragraph?"]
+            ]
+        ]);
+    
+        $data   = json_decode($response, true);
+        $advice = $data['choices'][0]['message']['content'] 
+                  ?? 'No advice generated.';
+        $this->returnJSON(['advice' => trim($advice)]);
+    }
 
 }

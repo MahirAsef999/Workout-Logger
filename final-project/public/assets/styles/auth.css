@@ -1,0 +1,110 @@
+/* Header */
+.gradient-header {
+  background-color: #1e272e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.gradient-header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.gradient-header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Container */
+.auth-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Form */
+.auth-form {
+  background-color: white;
+  max-width: 850px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.auth-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #2d3436;
+}
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+.auth-form input:focus {
+  outline: none;
+  border-color: #2ecc71;
+}
+.auth-form input.error-border {
+  border-color: #e74c3c;
+}
+
+/* Button */
+.auth-form button,
+.auth-form .btn.green {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.auth-form button:hover,
+.auth-form .btn.green:hover {
+  background-color: #27ae60;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* “Already have an account?” link */
+.auth-container > p {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+.auth-container > p a {
+  color: #0984e3;
+  text-decoration: none;
+}
+.auth-container > p a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #1e272e;
+  color: #e0f2f1;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  border-top: 3px solid #2ecc71;
+}

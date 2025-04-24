@@ -1,5 +1,8 @@
 <?php
 
+// API
+require_once __DIR__ . '/../../vendor/autoload.php';
+
 $env = parse_ini_file('../.env');
 
 define('DBHOST', $env['DBHOST']);

@@ -5,91 +5,8 @@
   <title>Contact Us - Fitness Haven</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles/homepage.css">
-
-  <!-- Inline styles specific to the Contact Us page -->
-  <style>
-    /* Contact form container */
-    .contact-container {
-      max-width: 700px;
-      margin: 50px auto;
-      background-color: #fff5f6;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      font-family: 'Roboto', sans-serif;
-      border: 1px solid #e74c3c;
-    }
-
-    /* Section headers */
-    .contact-container h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #1e272e;
-      margin-bottom: 30px;
-    }
-
-    /* Labels for input fields */
-    .contact-container label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: #1e272e;
-    }
-
-    /* Input + textarea fields */
-    .contact-container input,
-    .contact-container textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      background-color: #fff;
-      color: #2d3436;
-    }
-
-    .contact-container textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    /* Submit button */
-    .contact-container button {
-      background-color: #e74c3c;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-weight: bold;
-      width: 100%;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
-    }
-
-    .contact-container button:hover {
-      background-color: #c0392b;
-      box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
-    }
-
-    /* Error + success messages */
-    .error-message {
-      color: #e74c3c;
-      margin-top: -15px;
-      margin-bottom: 15px;
-      font-size: 0.85rem;
-    }
-
-    #successMessage {
-      text-align: center;
-      font-weight: bold;
-      color: #2ecc71;
-      margin-top: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/styles/contact.css">
+  <link rel="stylesheet" href="/assets/styles/shared.css">
 </head>
 <body>
 
@@ -110,7 +27,6 @@
 
     <!-- Contact form -->
     <form id="contactForm">
-      <!-- Optional name inputs -->
       <label for="first_name">First Name:</label>
       <input type="text" name="first_name" id="first_name" placeholder="Optional">
       <div id="firstNameError" class="error-message"></div>
@@ -119,102 +35,27 @@
       <input type="text" name="last_name" id="last_name" placeholder="Optional">
       <div id="lastNameError" class="error-message"></div>
 
-      <!-- Email input -->
       <label for="email">Email:</label>
       <input type="text" name="email" id="email" placeholder="Optional">
       <div id="emailError" class="error-message"></div>
 
-      <!-- Required feedback textarea -->
       <label for="feedback">Feedback (max 100 characters):</label>
       <textarea name="feedback" id="feedback" maxlength="100" required></textarea>
       <div id="feedbackError" class="error-message"></div>
 
-      <!-- Submit and feedback message -->
       <button type="submit">Submit</button>
       <div id="successMessage"></div>
     </form>
   </div>
 </main>
 
-<!--  footer -->
+<!-- Footer -->
 <footer>
   &copy; 2025 Fitness Haven. All rights reserved.
 </footer>
 
-<!-- JavaScript: handles form validation and AJAX submission -->
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    // Collect form values
-    const data = new URLSearchParams();
-    const first = document.getElementById("first_name").value.trim();
-    const last = document.getElementById("last_name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const feedback = document.getElementById("feedback").value.trim();
-
-    // Clear any previous error messages
-    document.getElementById("firstNameError").textContent = "";
-    document.getElementById("lastNameError").textContent = "";
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("feedbackError").textContent = "";
-    document.getElementById("successMessage").textContent = "";
-
-    let hasError = false;
-
-    // Validate names: no numbers allowed
-    if (first && /\d/.test(first)) {
-      document.getElementById("firstNameError").textContent = "First name cannot contain numbers";
-      hasError = true;
-    }
-
-    if (last && /\d/.test(last)) {
-      document.getElementById("lastNameError").textContent = "Last name cannot contain numbers";
-      hasError = true;
-    }
-
-    // Validate email: must contain @
-    if (email && !email.includes("@")) {
-      document.getElementById("emailError").textContent = "Email must contain '@'";
-      hasError = true;
-    }
-
-    // Validate feedback length
-    if (feedback.length > 100) {
-      document.getElementById("feedbackError").textContent = "Feedback must be under 100 characters";
-      hasError = true;
-    }
-
-    // If any validation fails, stop here
-    if (hasError) return;
-
-    // Append values to be sent to the server
-    data.append("first_name", first);
-    data.append("last_name", last);
-    data.append("email", email);
-    data.append("feedback", feedback);
-
-    // Send data to the backend via POST (AJAX-style)
-    fetch("/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: data.toString()
-    })
-    .then(res => res.json())
-    .then(result => {
-      if (result.success) {
-        // Show success message and reset form
-        document.getElementById("successMessage").textContent = "Thank you for your feedback!";
-        document.getElementById("contactForm").reset();
-      } else {
-        // If the server sends back an error
-        alert(result.error || "Submission failed.");
-      }
-    });
-  });
-</script>
+<!-- External JavaScript -->
+<script src="/assets/js/contact.js" defer></script>
 
 </body>
 </html>

@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/styles/homepage.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="stylesheet" href="/assets/styles/auth.css" />
+  <link rel="stylesheet" href="/assets/styles/shared.css" />
 </head>
 <body>
-  <!-- Header with page title and subtitle -->
+  <!-- Header -->
   <header class="gradient-header">
     <h1>Login</h1>
     <p>Access your workout logs</p>
@@ -15,18 +16,24 @@
 
   <!-- Login form -->
   <main class="auth-container">
-    <form method="POST" action="/login" class="auth-form" id="loginForm">
-      <!-- Username  -->
+    <form id="loginForm" class="auth-form" method="POST" action="/login">
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" placeholder="Enter your username" required />
+      <input type="text"
+             id="username"
+             name="username"
+             placeholder="Enter your username"
+             required />
 
-      <!-- Password  -->
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      <input type="password"
+             id="password"
+             name="password"
+             placeholder="Enter your password"
+             required />
 
-      <!-- Submit  -->
       <button type="submit" class="btn green">Login</button>
 
+      <!-- Error message -->
       <p id="errorMessage" class="error-message"></p>
     </form>
 
@@ -38,32 +45,28 @@
     <p>&copy; 2025 Workout Tracker. All rights reserved.</p>
   </footer>
 
-  <!-- Form submission  -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("loginForm");
+      const form         = document.getElementById("loginForm");
       const errorMessage = document.getElementById("errorMessage");
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault(); 
+      form.addEventListener("submit", async e => {
+        e.preventDefault();
+        errorMessage.style.display = "none";
 
-        const formData = new FormData(form); 
-        const data = new URLSearchParams(formData); 
-
-        const res = await fetch("/login", {
+        const data = new URLSearchParams(new FormData(form));
+        const res  = await fetch("/login", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: data,
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: data
         });
-
-        const json = await res.json(); 
+        const json = await res.json();
 
         if (json.success) {
           window.location.href = "/";
         } else {
-          errorMessage.textContent = json.error || "Something went wrong.";
+          errorMessage.textContent   = json.error || "Something went wrong.";
+          errorMessage.style.display = "block";
         }
       });
     });

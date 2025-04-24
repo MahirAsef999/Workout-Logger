@@ -130,4 +130,12 @@ class Router {
             $about->showAboutPage();
         }
     }
+
+    protected function handleAdviceRoute() {
+        if ($this->uriArray[1] === 'advice' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+            (new WorkoutController())->getAdvice();
+        }
+    }
+
+    
 }
