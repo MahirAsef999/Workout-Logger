@@ -12,7 +12,6 @@ $_ENV['OPENAI_API_KEY'] = $env['OPENAI_API_KEY'];
 // Core
 require '../app/core/Router.php';
 
-// Base MVC components
 require '../app/models/Model.php';
 require '../app/controllers/Controller.php';
 
