@@ -19,7 +19,7 @@ class Router {
         $this->handleWorkoutRoutes();
         $this->handleAuthRoutes();
         $this->handleContactRoutes();
-        $this->handleAboutRoutes(); // ✅ Now handling /about
+        $this->handleAboutRoutes(); 
     }
 
     protected function routeSplit() {
