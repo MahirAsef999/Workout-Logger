@@ -17,8 +17,8 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
 
 **Frontend:**
 - HTML5
-- CSS3
-- JavaScript (Vanilla)
+- CSS
+- JavaScript
 
 **Backend:**
 - PHP
