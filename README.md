@@ -123,7 +123,7 @@ CREATE TABLE workouts (
 
 MIT License - feel free to use this project for learning!
 
-## 👤 Author
+## 👤 Developer
 
 **Mahir Asef**
 - LinkedIn: [linkedin.com/in/mahir-asef](https://www.linkedin.com/in/mahir-asef-46b3ba203/)
