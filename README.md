@@ -39,7 +39,7 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
 ![Dashboard](screenshots/dashboard.png)
 
 ### Workout Log
-![Workout](screenshots/workout.png)
+![Workout](Workout-Logger/final-project/screenshots/workout.png)
 
 ### AI Assistant
 ![ChatGPT](screenshots/chatgpt.png)
