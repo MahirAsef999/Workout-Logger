@@ -109,11 +109,8 @@ CREATE TABLE workouts (
 );
 ```
 
-## 🎥 Demo Video
 
-[Coming soon - Link to YouTube demo]
-
-## 🔮 Future Enhancements
+## 🔮 Future Features
 
 - [ ] Add workout analytics and progress charts
 - [ ] Implement workout templates for common routines
