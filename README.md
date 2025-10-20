@@ -33,16 +33,19 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
 ## 📸 Screenshots
 
 ### Login Page
-![Login](screenshots/login.jpg)
+![Login](final-project/screenshots/login.jpg)
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](final-project/screenshots/dashboard.jpg)
 
 ### Workout Log
-![Workout](Workout-Logger/final-project/screenshots/workout.png)
+![Workout](final-project/screenshots/Workout_Logger.jpg)
+
+### Search by Exercise
+![Search by Exercise](final-project/screenshots/search_exercise.jpg)
 
 ### AI Assistant
-![ChatGPT](screenshots/chatgpt.png)
+![ChatGPT](final-project/screenshots/AI_help.jpg)
 
 ## 🚀 Installation & Setup
 
