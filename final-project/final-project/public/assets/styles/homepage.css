@@ -1,0 +1,106 @@
+body.homepage {
+  background-color: #f1f2f6;
+}
+
+body.homepage {
+  background-color: #f1f2f6;
+}
+
+/* Full Scren Banner (with background image) */
+.hero {
+  background: url('/assets/image/gym_equipment.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hero h1 span {
+  color: #00b894;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.cta-button {
+  background: #00b894;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  transition: background-color 0.3s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+.cta-button:hover {
+  background: #019875;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-card h2 {
+  margin-bottom: 10px;
+  color: #00b894;
+}
+
+.quote-section {
+  text-align: center;
+  background: rgb(141, 145, 140);
+  padding: 40px 20px;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #2d3436;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+}
