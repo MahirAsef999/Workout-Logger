@@ -33,7 +33,7 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
 ## 📸 Screenshots
 
 ### Login Page
-![Login](screenshots/login.png)
+![Login](screenshots/login.jpg)
 
 ### Dashboard
 ![Dashboard](screenshots/dashboard.png)
