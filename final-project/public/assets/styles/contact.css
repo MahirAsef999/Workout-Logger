@@ -1,0 +1,73 @@
+/* Contact Form Container */
+.contact-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff5f6;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #e74c3c;
+  }
+  
+  /* Contact Form Title */
+  .contact-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1e272e;
+    margin-bottom: 30px;
+  }
+  
+  /* Contact Form Fields */
+  .contact-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1e272e;
+  }
+  
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #2d3436;
+  }
+  
+  .contact-container textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  /* Submit Button */
+  .contact-container button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+  }
+  
+  .contact-container button:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+  }
+  
+  /* Success */
+  #successMessage {
+    text-align: center;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-top: 10px;
+  }
+  
