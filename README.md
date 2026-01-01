@@ -1,11 +1,11 @@
-# 💪 Workout Logger
+# Fitness Haven (Workout Logger)
 
 A full-stack web application for tracking workouts with AI-powered workout tips via ChatGPT integration.
 
 ![Workout Logger Demo](screenshots/demo.gif)
 *Add a screenshot or GIF here*
 
-## 🎯 Features
+## Features
 
 - **User Authentication**: Secure registration and login system with password hashing
 - **Workout Tracking**: Log exercises with date, type, sets, reps, and duration
@@ -13,7 +13,7 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
 - **AI Integration**: Real-time workout tips and advice powered by OpenAI's ChatGPT API
 - **Workout History**: View all past workouts organized by date
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend:**
 - HTML5
@@ -30,7 +30,7 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
 **Development Environment:**
 - XAMPP (Apache, MySQL, PHP)
 
-## 📸 Screenshots
+## Pictures
 
 ### Login Page
 ![Login](final-project/screenshots/login.jpg)
@@ -47,7 +47,7 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
 ### AI Assistant
 ![ChatGPT](final-project/screenshots/AI_help.jpg)
 
-## 🚀 Installation & Setup
+## Setting up the application
 
 ### Prerequisites
 - XAMPP (or any PHP/MySQL environment)
@@ -84,7 +84,7 @@ A full-stack web application for tracking workouts with AI-powered workout tips 
    - Start XAMPP (Apache + MySQL)
    - Visit: `http://localhost/Workout-Logger`
 
-## 📋 Database Schema
+## Database
 ```sql
 -- Users table
 CREATE TABLE users (
@@ -109,16 +109,6 @@ CREATE TABLE workouts (
 );
 ```
 
-
-## 🔮 Future Features
-
-- [ ] Add workout analytics and progress charts
-- [ ] Implement workout templates for common routines
-- [ ] Add social features (share workouts with friends)
-- [ ] Mobile responsive design
-- [ ] Export workout data to CSV
-- [ ] Integration with fitness wearables
-
 ## 📝 License
 
 MIT License - feel free to use this project for learning!
@@ -128,7 +118,3 @@ MIT License - feel free to use this project for learning!
 **Mahir Asef**
 - LinkedIn: [linkedin.com/in/mahir-asef](https://www.linkedin.com/in/mahir-asef-46b3ba203/)
 - Email: mahirasef74@gmail.com
-
----
-
-⭐ If you found this project helpful, please give it a star!
