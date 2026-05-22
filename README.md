@@ -3,7 +3,6 @@
 A full-stack web application for tracking workouts with AI-powered workout tips via ChatGPT integration.
 
 ![Workout Logger Demo](screenshots/demo.gif)
-*Add a screenshot or GIF here*
 
 ## Features
 
